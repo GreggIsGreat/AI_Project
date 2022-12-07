@@ -1,0 +1,108 @@
+{% extends 'webpages/main.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+{% block content %}
+ <div class="header_section">
+         <div class="header_main">
+            <div class="container-fluid">
+               <div class="logo"><a href="#"><img src="{% static 'media/hotline.png' %}" style="max-width:50px"></a></div>
+               <div class="menu_main">
+                  <ul>
+                     <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                     <li><a href="{% url 'about' %}">About</a></li>
+                     <li><a href="{% url 'services' %}">Services</a></li>
+                     <li><a href="{% url 'contact' %}">Contact us</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <h1 class="banner_taital">Suicide Prevention</h1>
+                        <p class="banner_text">Help all those who have suffered</p>
+                        <div class="read_bt"><a href="#">Get A Quote</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+
+      <!-- client section start -->
+      <div class="client_section layout_padding">
+         <div class="container">
+            <h1 class="banner_taital">Testimonial</h1>
+            <div class="client_section_2">
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">One evening my mother told me that the reason she abuses me is because i look like my father this drove me to the edge but when i stumbled on to this website i never knew i was suicidal</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="{% static 'media/client-img.png' %}"></div>
+                                 <div class="quick_icon"><img src="{% static 'media/quick-icon.png' %}"></div>
+                              </div>
+                              <div class="client_taital_right">
+                                 <h4 class="client_name">Dame</h4>
+                                 <p class="customer_text">Customer</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="client_main">
+                           <div class="box_left">
+                              <p class="lorem_text">When i used this web app it helped me save my fathers life</p>
+                           </div>
+                           <div class="box_right">
+                              <div class="client_taital_left">
+                                 <div class="client_img"><img src="{% static 'media/client-img1.png' %}"></div>
+                                 <div class="quick_icon"><img src="{% static 'media/quick-icon.png' %}"></div>
+                              </div>
+                              <div class="client_taital_right">
+                                 <h4 class="client_name">Tina</h4>
+                                 <p class="customer_text">Customer</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- client section start -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <!-- javascript -->
+      <script src="{% static 's/owl.carousel.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+{% endblock %}
+</body>
+</html>

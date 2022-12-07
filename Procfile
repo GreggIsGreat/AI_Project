@@ -1,0 +1,1 @@
+web: gunicorn Suicide_Predictor.wsgi --log-file -
