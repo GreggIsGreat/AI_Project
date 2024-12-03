@@ -1,0 +1,29 @@
+{% extends 'webpages/main.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+{% block content %}
+     <div class="banner_section layout_padding">
+   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <div class="container">
+               <div class="card">
+                  <div class="card-body">
+                     <h1 class="card-title banner_taital">Suicide Prevention</h1>
+                     <p class="card-text banner_text">Help all those who have suffered</p>
+                     <div class="read_bt"><a href="#">Get A Quote</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+</body>
+</html>

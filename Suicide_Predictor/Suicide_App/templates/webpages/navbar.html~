@@ -1,26 +1,46 @@
 {% load static %}
-            <div class="mobile_menu">
-               <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                  <div class="logo_mobile"><a href="#"><img src="{% static 'media/hotline.png' %}" style="max-width:50px"></a></div>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="{% url 'about' %}">About</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="{% url 'services' %}">Services</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="{% url 'contact' %}">Contact</a>
-                        </li>
-                     </ul>
-                  </div>
-               </nav>
-            </div>
+<div class="mobile_menu">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="logo_mobile">
+      <a href="#">
+        <img src="{% static 'media/hotline.png' %}" style="max-width:50px">
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto"> <!-- Added mx-auto to center the navbar items -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'services' %}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'contact' %}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
+<style>
+  .navbar-nav .nav-link {
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ccc; /* Change the hover color to your desired color */
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff; /* Change the active color to your desired color */
+  background-color: #333; /* Change the active background color to your desired color */
+  border-bottom: 2px solid #333; /* Add a bottom border to the active link */
+}
+</style>

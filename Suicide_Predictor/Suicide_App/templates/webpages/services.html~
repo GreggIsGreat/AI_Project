@@ -82,6 +82,7 @@
           <div class="title"><h5><strong>NB</strong> Sex: Male = 0, Female = 1</h5></div>
           <div class="title"><h5><strong>NB</strong>: No = 0, Yes = 1</h5></div>
           <br>
+          <br>
         </div>
       </form>
     </div>
@@ -91,9 +92,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
-  padding:  0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+ font-family: 'Poppins',sans-serif;
 }
 body{
   #height: 1000vh;
@@ -104,10 +105,10 @@ body{
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 .container{
-  max-width: 1200px; /* Increased card width */
+  max-width: 1000px; /* Increased card width */
   width: 100%;
   background-color: #fff;
-  padding: 30px 30px 50px; /* Added space at the bottom */
+  padding: 30px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }

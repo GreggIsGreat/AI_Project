@@ -8,41 +8,7 @@
 <body>
 {% block content %}
 
- <div class="container">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Botswana Network for Mental Health Address</div>
-          <div class="text-one">P O BOX 201997, Broadhust Ext 19, Botswana</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic"> Botswana Suicide Hotline</div>
-          <div class="text-one"><strong>Contact 1:</strong> 3911270</div>
-          <div class="text-two"><strong>Contact 2:</strong> 3911290</div>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="topic-text">Send us a message</div>
-        <p>If you have any queries related to any issues that might be affecting you, you can send us a message from here. It's our pleasure to help you.</p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email">
-        </div>
-        <div class="input-box message-box">
-          <textarea placeholder="Enter your message"></textarea>
-        </div>
-        <div class="button">
-          <input type="button" value="Send Now">
-        </div>
-      </form>
-    </div>
-    </div>
-  </div>
+ 
 
 <style>
     /* Google Font CDN Link */
