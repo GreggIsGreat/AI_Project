@@ -12,21 +12,22 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)c+t(=bp1j-e27h*dffs0oju714*7!0lw%8*_zy@c8r+#e)=wt'
+SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-key-for-development')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,7 +61,7 @@ ROOT_URLCONF = 'Suicide_Predictor.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['PycharmProjects/AI Project/Suicide_Predictor/Suicide_App/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'Suicide_App/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,13 +122,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
-
-django_heroku.settings(locals())
 
 
 # Default primary key field type
