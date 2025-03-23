@@ -1,3 +1,77 @@
+/* Add this at the very top of style.css */
+.about-container *,
+.about-container *::before,
+.about-container *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add these base styles at the top of your style.css */
+:root {
+    --primary-color: #4f46e5;
+    --gradient-start: #6366f1;
+    --gradient-end: #4f46e5;
+    --text-dark: #2d3748;
+    --text-light: #718096;
+}
+
+/* Reset some Bootstrap styles for the about page */
+.about-container {
+    /* ... existing styles ... */
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-dark);
+}
+
+/* Override Bootstrap container styles */
+.about-container.container {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 2rem auto !important;
+    padding: 2rem !important;
+}
+
+/* Override Bootstrap card styles */
+.about-container .info-card {
+    /* ... existing styles ... */
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+/* Override Bootstrap heading styles */
+.about-container h1,
+.about-container h2 {
+    font-family: 'Poppins', sans-serif !important;
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+}
+
+/* Override Bootstrap list styles */
+.about-container .hope-list {
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Override Bootstrap blockquote styles */
+.about-container blockquote {
+    /* ... existing styles ... */
+    border: none !important;
+    padding: 2rem !important;
+    margin: 0 auto !important;
+}
+
+/* Override Bootstrap responsive breakpoints */
+@media (max-width: 768px) {
+    .about-container {
+        margin: 1rem !important;
+        padding: 1rem !important;
+    }
+    
+    .about-container .hero-section {
+        padding: 2rem 1rem !important;
+    }
+}
+
 .card {
         background-color: #fff;
         padding: 20px;
@@ -34,3 +108,181 @@
       font-weight: 700; /* add font weight */
       text-transform: uppercase; /* add text transform */
     }
+
+    .about-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-container .hero-section {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        color: white;
+        border-radius: 20px;
+        margin-bottom: 3rem;
+    }
+
+    .about-container .hero-section h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .about-container .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    .about-container .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .about-container .info-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .about-container .info-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .about-container .info-card h2 {
+        color: #4f46e5;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .about-container .stat-item {
+        margin: 1.5rem 0;
+    }
+
+    .about-container .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #4f46e5;
+        display: block;
+    }
+
+    .about-container .hope-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .about-container .hope-list li {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    .about-container .hope-list li::before {
+        content: "•";
+        color: #4f46e5;
+        position: absolute;
+        left: 0;
+    }
+
+    .about-container .quote-section {
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .about-container blockquote {
+        font-size: 1.8rem;
+        font-style: italic;
+        color: #4f46e5;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        padding: 2rem;
+        border-left: none;
+    }
+
+    @media (max-width: 768px) {
+        .about-container .hero-section h1 {
+            font-size: 2.5rem;
+        }
+        
+        .about-container .content-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .about-container blockquote {
+            font-size: 1.4rem;
+        }
+    }
+
+/* Add these styles for the dark background and centered card */
+.about-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Update existing styles */
+.hero-section {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.content-grid {
+    padding: 2rem;
+    background: #ffffff;
+}
+
+.info-card {
+    background: #f8f9fa;
+}
+
+.quote-section {
+    background: #f8f9fa;
+    margin: 0;
+    padding: 3rem 2rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-wrapper {
+        padding: 1rem;
+    }
+    
+    .content-grid {
+        padding: 1rem;
+    }
+    
+    .quote-section {
+        padding: 2rem 1rem;
+    }
+}
